@@ -16,7 +16,6 @@ import android.widget.Button
 import android.widget.ScrollView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.huawei.agconnect.config.AGConnectServicesConfig
 import com.huawei.hms.aaid.HmsInstanceId
 import com.huawei.hms.common.ApiException
 import com.huawei.hms.push.HmsMessaging
@@ -128,7 +127,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             override fun run() {
                 try {
                     // read from agconnect-services.json
-                    val appId = "Please enter your App_Id from agconnect-services.json "
+                    val appId = "105676815"
                     val token = HmsInstanceId.getInstance(this@MainActivity).getToken(appId, "HCM")
                     Log.i(TAG, "get token:$token")
                     if (!TextUtils.isEmpty(token)) {
@@ -154,7 +153,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             override fun run() {
                 try {
                     // read from agconnect-services.json
-                    val appId = "Please enter your App_Id from agconnect-services.json "
+                    val appId = "105676815"
                     HmsInstanceId.getInstance(this@MainActivity).deleteToken(appId, "HCM")
                     Log.i(TAG, "deleteToken success.")
                     showLog("deleteToken success")

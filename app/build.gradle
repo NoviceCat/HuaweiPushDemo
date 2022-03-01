@@ -25,8 +25,6 @@ android {
             keyAlias 'demo123'
             keyPassword 'demo123'
             storePassword 'demo123'
-            v1SigningEnabled true
-            v2SigningEnabled true
         }
     }
 
